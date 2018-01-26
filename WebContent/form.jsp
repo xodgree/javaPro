@@ -1,9 +1,13 @@
-<!DOCTYPE HTML>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="euc-kr"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<% 
+	request.setCharacterEncoding("utf-8");
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Form Style 9</title>
-
+<title>form</title>
 <style type="text/css">
 body{
 	background: #17445E;
@@ -82,29 +86,28 @@ body{
 </style>
 </head>
 <body>
-
 <form class="form-style-9" method="post">
 <ul>
 <li>
-    <input type="text" name="name" class="field-style field-split align-left" placeholder="ìž‘ì„±ìž" value='<%=request.getParameter("name")%>'/>
-    <input type="text" name="title" class="field-style field-split align-right" placeholder="ì œëª©" value='<%=request.getParameter("title")%>'/>
+    <input type="text" name="name" class="field-style field-split align-left" placeholder="ÀÛ¼ºÀÚ" value='<%=request.getParameter("name")%>'/>
+    <input type="text" name="title" class="field-style field-split align-right" placeholder="Á¦¸ñ" value='<%=request.getParameter("title")%>'/>
 
 </li>
 <li>
-    <input type="text" name="phone" class="field-style field-split align-left" placeholder="Phone" />
-    <input type="text" name="address" class="field-style field-split align-right" placeholder="Address" />
+<textarea name="content" class="field-style" placeholder="³»¿ë"  value='<%=request.getParameter("content")%>'></textarea>
 </li>
 <li>
-<input type="text" name="hobby" class="field-style field-full align-none" placeholder="Hobby" />
+    <input type="text" name="content" class="field-style field-split align-left" placeholder="³»¿ë" value='<%=request.getParameter("content")%>'/>
+    <input type="text" name="password" class="field-style field-split align-right" placeholder="ºñ¹Ð¹øÈ£" value='<%=request.getParameter("password")%>'/>
 </li>
 <li>
-<textarea name="message" class="field-style" placeholder="Message"></textarea>
+<input type="text" name="tell" class="field-style field-full align-none" placeholder="ÀüÈ­¹øÈ£" value='<%=request.getParameter("tell")%>' />
 </li>
+
 <li>
 <input type="submit" value="Send Message" />
 </li>
 </ul>
 </form>
-
 </body>
 </html>
